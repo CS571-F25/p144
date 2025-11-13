@@ -1,10 +1,8 @@
 # PathForge
 
-A project management tool that helps users set long-term goals, break big tasks into smaller ones, and track progress through completion with visual dependency mapping.
-
 ## Overview
 
-PathForge transforms traditional to-do lists into interactive dependency graphs, helping you visualize the path from start to finish. Unlike linear task lists, PathForge requires users to map out relationships between tasks, creating a clear roadmap that shows which tasks can be worked on now and which are blocked by prerequisites.
+PathForge is a project management tool that helps users set long-term goals, break big tasks into smaller ones, and track progress through completion with visual dependency mapping.
 
 ## Key Features
 
@@ -126,6 +124,71 @@ pathforge/
 - [ ] Data persistence
 - [ ] User authentication (optional)
 - [ ] Deploy to production
+
+# Design
+
+## Site Architecture
+
+### Pages (React Router Routes)
+1. **Home Page** (`/`)
+   - Landing page with project introduction
+   - Hero section with tagline
+   - Feature overview cards
+   - Use case examples
+
+2. **Projects Page** (`/projects`)
+   - Display user's projects in a card grid
+   - Create new project functionality
+   - Project cards showing progress and status
+
+3. **About Page** (`/about`)
+   - Information about PathForge
+   - How it works guide
+   - Technology stack details
+   - Contact/GitHub information
+
+4. **Demo Page** (`/demo`) (Bonus)
+   - Interactive demo of task management
+   - Simple task creation and visualization
+
+### Component Structure (5+ Components Required)
+
+1. **NavigationBar**
+   - Bootstrap Navbar with links to all pages
+   - Responsive mobile menu
+   - Active route highlighting
+
+2. **Hero**
+   - Large title and tagline
+   - Call-to-action button
+   - Background styling
+
+3. **FeatureCard**
+   - Reusable card component for displaying features
+   - Icon, title, and description props
+   - Hover effects
+
+4. **ProjectCard**
+   - Display individual project information
+   - Progress indicator
+   - Action buttons (view, edit, delete)
+
+5. **Footer**
+   - Copyright information
+   - Links to GitHub
+   - Contact information
+
+6. **PageContainer** (Bonus)
+   - Wrapper component for consistent page layout
+   - Padding and max-width constraints
+
+## Future Enhancements
+- Interactive task dependency visualization
+- Local storage for project persistence
+- Graph visualization with React Flow
+- User authentication
+- Dark mode toggle
+
 
 ## Contributing
 
