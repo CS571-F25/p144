@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 function Footer() {
   return (
     <footer className="bg-dark text-white py-4 mt-5">
-      <Container>
+      <Container fluid>
         <div className="text-center">
           <p className="mb-2">Built by Kejun Liu for CS571 at UW-Madison</p>
           <p className="mb-0">

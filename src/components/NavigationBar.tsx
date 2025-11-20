@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NavigationBar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-      <Container>
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
           PathForge
         </Navbar.Brand>

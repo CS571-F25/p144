@@ -6,6 +6,7 @@ import PageContainer from '../components/PageContainer';
 function Projects() {
   const sampleProjects = [
     {
+      id: 1,
       title: 'Learn German',
       description: 'Reach B1 proficiency in 9 months',
       progress: 35,
@@ -13,6 +14,7 @@ function Projects() {
       totalTasks: 20
     },
     {
+      id: 2,
       title: 'Tech Career Transition',
       description: 'Land a software engineering role',
       progress: 60,
@@ -20,6 +22,7 @@ function Projects() {
       totalTasks: 20
     },
     {
+      id: 3,
       title: 'Marathon Training',
       description: 'Complete first marathon in 6 months',
       progress: 25,
@@ -27,6 +30,7 @@ function Projects() {
       totalTasks: 20
     },
     {
+      id: 4,
       title: 'Build Portfolio Website',
       description: 'Create and deploy personal portfolio',
       progress: 80,
@@ -34,6 +38,7 @@ function Projects() {
       totalTasks: 20
     },
     {
+      id: 5,
       title: 'Master Data Structures',
       description: 'Complete all leetcode patterns',
       progress: 45,
@@ -41,6 +46,7 @@ function Projects() {
       totalTasks: 20
     },
     {
+      id: 6,
       title: 'Write a Novel',
       description: '50,000 words for NaNoWriMo',
       progress: 15,
@@ -56,23 +62,27 @@ function Projects() {
         subtitle="Manage and track all your long-term goals"
       />
       <PageContainer>
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <h3>Active Projects</h3>
-          <Button variant="primary">+ New Project</Button>
+        <div className="px-3">
+          <div className="d-flex justify-content-between align-items-center mb-4">
+            <h3>Active Projects</h3>
+            <Button variant="primary">+ New Project</Button>
+          </div>
+          <Row xs={1} md={2} lg={3} className="g-4">
+            {sampleProjects.map((project, index) => (
+              <Col key={project.id}>
+                <ProjectCard
+                  id={project.id}
+                  title={project.title}
+                  description={project.description}
+                  progress={project.progress}
+                  tasksCompleted={project.tasksCompleted}
+                  totalTasks={project.totalTasks}
+                  colorClass={`card-color-${(index % 6) + 1}`}
+                />
+              </Col>
+            ))}
+          </Row>
         </div>
-        <Row xs={1} md={2} lg={3} className="g-4">
-          {sampleProjects.map((project, index) => (
-            <Col key={index}>
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                progress={project.progress}
-                tasksCompleted={project.tasksCompleted}
-                totalTasks={project.totalTasks}
-              />
-            </Col>
-          ))}
-        </Row>
       </PageContainer>
     </>
   );

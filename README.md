@@ -125,11 +125,9 @@ pathforge/
 - [ ] User authentication (optional)
 - [ ] Deploy to production
 
-# Design
-
 ## Site Architecture
 
-### Pages (React Router Routes)
+### Pages
 1. **Home Page** (`/`)
    - Landing page with project introduction
    - Hero section with tagline
@@ -151,7 +149,7 @@ pathforge/
    - Interactive demo of task management
    - Simple task creation and visualization
 
-### Component Structure (5+ Components Required)
+### Components
 
 1. **NavigationBar**
    - Bootstrap Navbar with links to all pages
